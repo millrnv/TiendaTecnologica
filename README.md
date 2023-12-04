@@ -19,12 +19,11 @@ Dispositivo es una clase abstracta.
 
 PC: hereda de dispositivos y tiene atributos propios como tarjeta de video, fuente poder, chasis y además asocia una clase pantalla.
 
+Notebooks:hereda de dispositivos y tiene atributos propios como resolución de pantalla, tipo de teclado y bateria medida en mAh.
 
-Notebooks:hereda de dispositivos y tiene atributos propios
+Tablets:hereda de dispositivos y tiene atributos propios como resolución de pantalla y una lista de accesorios incorporados.
 
-
-Tablets:hereda de dispositivos y tiene atributos propios
-
+Todos los metodos heredados tienen el metodo getTipo que es un metodo abstracto.
 
 Pantalla: clase que aparece para asociarle una pantalla a la clase PC.
 
