@@ -33,11 +33,11 @@ public class TiendaTecnologica {
 		throw new UnsupportedOperationException();
 	}
 
-	public boolean agregarCliente(Cliente cliente) {
+	public boolean agregarCliente(Clientes cliente) {
 		throw new UnsupportedOperationException();
 	}
 
-	public boolean clienteExiste(Cliente cliente) {
+	public boolean clienteExiste(Clientes cliente) {
 		throw new UnsupportedOperationException();
 	}
 

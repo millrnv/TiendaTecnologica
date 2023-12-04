@@ -1,16 +1,27 @@
 package modelo;
 
-public class Dispositivo {
+public abstract class Dispositivo {
 	private String marca;
 	private String ram;
 	private String mAlmacenamiento;
 	private String procesador;
 	private String modelo;
-	private int añoFabricacion;
+	private int anioFabricacion;
 	private double precio;
 	private int cantStock;
 	private TiendaTecnologica tiendaTecnologica;
 	private Compra compra;
+
+	public Dispositivo(String marca, String ram, String mAlmacenamiento, String procesador, String modelo, int anioFabricacion, double precio, int cantStock) {
+		this.marca = marca;
+		this.ram = ram;
+		this.mAlmacenamiento = mAlmacenamiento;
+		this.procesador = procesador;
+		this.modelo = modelo;
+		this.anioFabricacion = anioFabricacion;
+		this.precio = precio;
+		this.cantStock = cantStock;
+	}
 
 	public String getMarca() {
 		return this.marca;
@@ -52,12 +63,12 @@ public class Dispositivo {
 		this.modelo = modelo;
 	}
 
-	public int getAñoFabricacion() {
-		return this.añoFabricacion;
+	public int getAnioFabricacion() {
+		return this.anioFabricacion;
 	}
 
-	public void setAñoFabricacion(int añoFabricacion) {
-		this.añoFabricacion = añoFabricacion;
+	public void setAnioFabricacion(int anioFabricacion) {
+		this.anioFabricacion = anioFabricacion;
 	}
 
 	public double getPrecio() {
@@ -75,4 +86,7 @@ public class Dispositivo {
 	public void setCantStock(int cantStock) {
 		this.cantStock = cantStock;
 	}
+
+	public abstract String getTipo();
+
 }
