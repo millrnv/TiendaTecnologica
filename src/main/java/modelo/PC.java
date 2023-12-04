@@ -4,12 +4,14 @@ public class PC extends Dispositivo {
 	private String tarjetaVideo;
 	private String fuentePoder;
 	private String chasis;
+	private Pantalla pantallaAsociada ;
 
-	public PC(String marca, String ram, String mAlmacenamiento, String procesador, String modelo, int anioFabricacion, double precio, int cantStock, String tarjetaVideo, String fuentePoder, String chasis) {
-		super(marca, ram, mAlmacenamiento, procesador, modelo, anioFabricacion, precio, cantStock);
+	public PC(String marca, String id,String ram, String mAlmacenamiento, String procesador, String modelo, int anioFabricacion, double precio, int cantStock, String tarjetaVideo, String fuentePoder, String chasis, Pantalla pantallaAsociada) {
+		super(marca, id,ram, mAlmacenamiento, procesador, modelo, anioFabricacion, precio, cantStock);
 		this.tarjetaVideo = tarjetaVideo;
 		this.fuentePoder = fuentePoder;
 		this.chasis = chasis;
+		this.pantallaAsociada = pantallaAsociada;
 	}
 
 	public String getTarjetaVideo() {
@@ -38,5 +40,23 @@ public class PC extends Dispositivo {
 
 	public String getTipo(){
 		return "PC. ";
+	}
+
+	@Override
+	public String toString() {
+		return "PC{" +
+				"tarjetaVideo='" + tarjetaVideo + '\'' +
+				", fuentePoder='" + fuentePoder + '\'' +
+				", chasis='" + chasis + '\'' +
+				", marca='" + marca + '\'' +
+				", id='" + id + '\'' +
+				", ram='" + ram + '\'' +
+				", mAlmacenamiento='" + mAlmacenamiento + '\'' +
+				", procesador='" + procesador + '\'' +
+				", modelo='" + modelo + '\'' +
+				", anioFabricacion=" + anioFabricacion +
+				", precio=" + precio +
+				", cantStock=" + cantStock +
+				'}';
 	}
 }

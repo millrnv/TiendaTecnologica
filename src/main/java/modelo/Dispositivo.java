@@ -1,19 +1,21 @@
 package modelo;
 
 public abstract class Dispositivo {
-	private String marca;
-	private String ram;
-	private String mAlmacenamiento;
-	private String procesador;
-	private String modelo;
-	private int anioFabricacion;
-	private double precio;
-	private int cantStock;
+	protected String marca;
+	protected String id;
+	protected String ram;
+	protected String mAlmacenamiento;
+	protected String procesador;
+	protected String modelo;
+	protected int anioFabricacion;
+	protected double precio;
+	protected int cantStock;
 	private TiendaTecnologica tiendaTecnologica;
 	private Compra compra;
 
-	public Dispositivo(String marca, String ram, String mAlmacenamiento, String procesador, String modelo, int anioFabricacion, double precio, int cantStock) {
+	public Dispositivo(String marca, String id,String ram, String mAlmacenamiento, String procesador, String modelo, int anioFabricacion, double precio, int cantStock) {
 		this.marca = marca;
+		this.id = id;
 		this.ram = ram;
 		this.mAlmacenamiento = mAlmacenamiento;
 		this.procesador = procesador;
@@ -25,6 +27,14 @@ public abstract class Dispositivo {
 
 	public String getMarca() {
 		return this.marca;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public void setMarca(String marca) {

@@ -5,8 +5,8 @@ public class Notebooks extends Dispositivo {
 	private String tipoTeclado;
 	private String bateria;
 
-	public Notebooks(String marca, String ram, String mAlmacenamiento, String procesador, String modelo, int anioFabricacion, double precio, int cantStock, String rPantallaInc, String tipoTeclado, String bateria) {
-		super(marca, ram, mAlmacenamiento, procesador, modelo, anioFabricacion, precio, cantStock);
+	public Notebooks(String marca, String id, String ram, String mAlmacenamiento, String procesador, String modelo, int anioFabricacion, double precio, int cantStock, String rPantallaInc, String tipoTeclado, String bateria) {
+		super(marca, id, ram, mAlmacenamiento, procesador, modelo, anioFabricacion, precio, cantStock);
 		this.rPantallaInc = rPantallaInc;
 		this.tipoTeclado = tipoTeclado;
 		this.bateria = bateria;
@@ -39,5 +39,23 @@ public class Notebooks extends Dispositivo {
 	public String getTipo(){
 		return "Notebook. ";
 
+	}
+
+	@Override
+	public String toString() {
+		return "Notebooks{" +
+				"rPantallaInc='" + rPantallaInc + '\'' +
+				", tipoTeclado='" + tipoTeclado + '\'' +
+				", bateria='" + bateria + '\'' +
+				", marca='" + marca + '\'' +
+				", id='" + id + '\'' +
+				", ram='" + ram + '\'' +
+				", mAlmacenamiento='" + mAlmacenamiento + '\'' +
+				", procesador='" + procesador + '\'' +
+				", modelo='" + modelo + '\'' +
+				", anioFabricacion=" + anioFabricacion +
+				", precio=" + precio +
+				", cantStock=" + cantStock +
+				'}';
 	}
 }
