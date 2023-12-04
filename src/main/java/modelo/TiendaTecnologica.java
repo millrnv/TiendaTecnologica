@@ -7,7 +7,19 @@ import modelo.Dispositivo;
 public class TiendaTecnologica {
 	private String direccion;
 	private ArrayList<Clientes> clientes = new ArrayList<Clientes>();
-	private ArrayList<Dispositivo> dispositivo = new ArrayList<Dispositivo>();
+	private ArrayList<Dispositivo> dispositivos = new ArrayList<Dispositivo>();
+
+	public TiendaTecnologica(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public ArrayList<Clientes> getClientes() {
+		return clientes;
+	}
+
+	public ArrayList<Dispositivo> getDispositivos() {
+		return dispositivos;
+	}
 
 	public String getDireccion() {
 		return this.direccion;
@@ -33,20 +45,40 @@ public class TiendaTecnologica {
 		throw new UnsupportedOperationException();
 	}
 
-	public boolean agregarCliente(Cliente cliente) {
-		throw new UnsupportedOperationException();
+	public boolean agregarCliente(Clientes cliente) {
+		if(!clienteExiste(cliente)){
+			clientes.add(cliente);
+			return true;
+		}
+		return false;
 	}
 
-	public boolean clienteExiste(Cliente cliente) {
-		throw new UnsupportedOperationException();
+	public boolean clienteExiste(Clientes cliente) {
+		for(Clientes c : clientes){
+			if(cliente.getRut().equals(c.getRut())){
+				return true;
+			}
+
+		}
+		return false;
 	}
 
 	public boolean agregarDispositivo(Dispositivo dispositivo) {
-		throw new UnsupportedOperationException();
+		if(!dispositivoExiste(dispositivo)){
+			dispositivos.add(dispositivo);
+			return true;
+		}
+		return false;
 	}
 
 	public boolean dispositivoExiste(Dispositivo dispositivo) {
-		throw new UnsupportedOperationException();
+		for(Dispositivo d : dispositivos){
+			if(dispositivo.getId().equals(d.getId())){
+				return true;
+			}
+
+		}
+		return false;
 	}
 
 	public void realizarVenta() {
